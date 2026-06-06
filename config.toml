@@ -1,0 +1,5 @@
+# interval = # How often the ip gets rechecked, optional, default 10
+# name = "" # The subdomain or full domain name, optional, default root domain
+# ttl = # The ttl for the DNS record, optional, default 60 (min. 60)
+zone = "" # The cloudflare zone id, can be found on the bottom of the right sidebar in the domain overview, required
+token = "" # The cloudflare token, has to have edit permissions for DNS on the domain the zone corresponds to, required
