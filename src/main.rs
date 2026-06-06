@@ -31,6 +31,7 @@ struct DNSRecords {
 #[derive(Deserialize)]
 struct DNSRecordsResult {
     pub id: String,
+    pub content: String,
 }
 
 #[derive(Serialize)]
@@ -129,6 +130,7 @@ fn main() {
             .expect("Failed to deserialize create DNS record request!");
         dns_record.result.id
     } else {
+        ip = dns_records.result[0].content.clone();
         dns_records.result[0].id.clone()
     };
 
